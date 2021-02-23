@@ -6,22 +6,31 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private Vector3 direction;
-    public float forwardSpeed;
-    public float maxForwardSpeed;
+    public float forwardSpeed = 10;
+    public float maxForwardSpeed = 20;
 
     private int desiredLane = 1;
     public float laneDistance = 4;
 
     // amount of jump on pressing up arrow
-    public float jumpForce;
+    public float jumpForce = 10;
     public float Gravity = -20;
 
     public Animator animator;
-    private bool isSliding;
+    private bool isSliding = false;
+
+
+    static int s_DeadHash = Animator.StringToHash ("Dead");
+	static int s_RunStartHash = Animator.StringToHash("runStart");
+	static int s_MovingHash = Animator.StringToHash("Moving");
+	static int s_JumpingHash = Animator.StringToHash("Jumping");
+	static int s_JumpingSpeedHash = Animator.StringToHash("JumpSpeed");
+	static int s_SlidingHash = Animator.StringToHash("Sliding");
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        StartRunning();
     }
 
     // Update is called once per frame
@@ -34,7 +43,7 @@ public class PlayerController : MonoBehaviour
         //    forwardSpeed += 0.1f * Time.deltaTime;
 
 
-        //animator.SetBool("isGameStarted", true);
+        animator.SetBool("isGameStarted", true);
 
         //animator.SetBool("isGrounded", controller.isGrounded);
 
@@ -52,7 +61,8 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                Jump();
+                // Jump();
+                StartCoroutine(Jump());
             }
         }
         //else
@@ -118,9 +128,20 @@ public class PlayerController : MonoBehaviour
         controller.Move(direction * Time.fixedDeltaTime);
     }
 
-    private void Jump()
+    private IEnumerator Jump()
     {
+        // animator.SetBool("Jumping", true);
+
+        animator.SetBool(s_JumpingHash, true);
         direction.y = jumpForce;
+        yield return new WaitForSeconds(1.1f);
+        
+        StopJump();
+    }
+
+    private void StopJump()
+    {
+        animator.SetBool(s_JumpingHash, false);
     }
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
@@ -134,13 +155,29 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Slide()
     {
         isSliding = true;
-        animator.SetBool("isSliding", true);
-        controller.center = new Vector3(0, -0.5f, 0);
-        controller.height = 1;
-        yield return new WaitForSeconds(1.3f);
-        controller.center = new Vector3(0, 0, 0);
-        controller.height = 2;
-        animator.SetBool("isSliding", false);
+        animator.SetBool(s_SlidingHash, true);
+        animator.SetFloat(s_JumpingSpeedHash, 1.0f);
+        // controller.center = new Vector3(0, -0.5f, 0);
+        // controller.height = 1;
+        yield return new WaitForSeconds(1.1f);
+        // controller.center = new Vector3(0, 0, 0);
+        // controller.height = 2;
+        animator.SetBool(s_SlidingHash, false);
         isSliding = false;
     }
+
+
+    // ##########################################
+
+    public void StartRunning()
+    {   
+        if (animator)
+        {
+            animator.Play(s_RunStartHash);
+            animator.SetBool(s_MovingHash, true);
+        }
+    }
+
+	
+
 }

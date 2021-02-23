@@ -1,5 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1109 &-3299605227486276359
+AnimatorTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isGameStarted
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 110237636}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 1
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -59,6 +76,12 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - m_Name: RandomDeath
     m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
+  - m_Name: isGameStarted
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -584,10 +607,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 110263802}
-    m_Position: {x: 380, y: -50, z: 0}
+    m_Position: {x: 390, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110237636}
-    m_Position: {x: 384, y: -204, z: 0}
+    m_Position: {x: 380, y: -200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110204928}
     m_Position: {x: 720, y: -204, z: 0}
@@ -596,26 +619,27 @@ AnimatorStateMachine:
     m_Position: {x: 120, y: -252, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000012658168066}
-    m_Position: {x: 600, y: -324, z: 0}
+    m_Position: {x: 600, y: -320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102000011308476110}
-    m_Position: {x: 384, y: 48, z: 0}
+    m_Position: {x: 740, y: 50, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107000012013570398}
     m_Position: {x: 120, y: -384, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 1107285076081101268}
-    m_Position: {x: 396, y: 168, z: 0}
+    m_Position: {x: 390, y: 170, z: 0}
   m_AnyStateTransitions:
   - {fileID: 110146878}
   m_EntryTransitions: []
   m_StateMachineTransitions:
   - first: {fileID: 1107285076081101268}
-    second: []
+    second:
+    - {fileID: 2008216475506934708}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 36, y: -144, z: 0}
-  m_EntryPosition: {x: 130, y: 70, z: 0}
+  m_EntryPosition: {x: 120, y: 190, z: 0}
   m_ExitPosition: {x: 636, y: -12, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102301022450862276}
@@ -1280,19 +1304,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102384093604711326}
-    m_Position: {x: 372, y: 0, z: 0}
+    m_Position: {x: 370, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102168975628562282}
     m_Position: {x: 372, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102144716317025708}
-    m_Position: {x: 372, y: 120, z: 0}
+    m_Position: {x: 370, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102380772590282644}
     m_Position: {x: 372, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102786439630067376}
-    m_Position: {x: 372, y: 240, z: 0}
+    m_Position: {x: 370, y: 240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102301022450862276}
     m_Position: {x: 48, y: 132, z: 0}
@@ -1306,3 +1330,20 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 756, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102301022450862276}
+--- !u!1109 &2008216475506934708
+AnimatorTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isGameStarted
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 110263802}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 1
