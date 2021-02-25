@@ -115665,7 +115665,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6268434755731074187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.43, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4210789478178810200}
@@ -126019,32 +126019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9288890aaa5454e24b3b0ae854fa1f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &7435993916130711735
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777888905740284952}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
-  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
---- !u!65 &7435993916176704354
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777888905045790429}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
-  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
 --- !u!1 &7435993916240880316
 GameObject:
   m_ObjectHideFlags: 0
@@ -126080,32 +126054,6 @@ Transform:
   m_Father: {fileID: 1336465265323613291}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7435993916508255913
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777888905599832015}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
-  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
---- !u!65 &7435993916839645716
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7777888906104635487}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
-  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
 --- !u!1 &7435993917001452940
 GameObject:
   m_ObjectHideFlags: 0
@@ -129425,6 +129373,58 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 72e65272e9752d842a914dd27fd86306, type: 3}
+--- !u!65 &7435993916176704354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777888905045790429}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
+  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
+--- !u!65 &7435993916508255913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777888905599832015}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
+  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
+--- !u!65 &7435993916130711735
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777888905740284952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
+  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
+--- !u!65 &7435993916839645716
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777888906104635487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999996, z: 0.21967822}
+  m_Center: {x: 0, y: 8.8674966e-17, z: 0.09983911}
 --- !u!1 &7777888906999860604
 GameObject:
   m_ObjectHideFlags: 0
@@ -129439,7 +129439,7 @@ GameObject:
   - component: {fileID: 7435993915339820412}
   m_Layer: 0
   m_Name: RoadWorksBarrierHigh
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129452,7 +129452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7777888906999860604}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -3.43, y: -21.46, z: -19.6}
+  m_LocalPosition: {x: -3.43, y: -21.41, z: -19.6}
   m_LocalScale: {x: 700, y: 30.999603, z: 70}
   m_Children: []
   m_Father: {fileID: 1336465265323613291}
@@ -140971,6 +140971,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80f2f75fd3e1d42c481b0324eab2c6ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f2f75fd3e1d42c481b0324eab2c6ed, type: 3}
 --- !u!1 &7777888906104635487 stripped
@@ -141056,6 +141061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficCone (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80f2f75fd3e1d42c481b0324eab2c6ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f2f75fd3e1d42c481b0324eab2c6ed, type: 3}
@@ -141143,6 +141153,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrafficCone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80f2f75fd3e1d42c481b0324eab2c6ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f2f75fd3e1d42c481b0324eab2c6ed, type: 3}
 --- !u!1 &7777888905740284952 stripped
@@ -141228,6 +141243,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TrafficCone
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 80f2f75fd3e1d42c481b0324eab2c6ed,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f2f75fd3e1d42c481b0324eab2c6ed, type: 3}
