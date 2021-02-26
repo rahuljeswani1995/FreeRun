@@ -164,11 +164,11 @@ public class PlayerController : MonoBehaviour
         isSliding = true;
         animator.SetBool(s_SlidingHash, true);
         animator.SetFloat(s_JumpingSpeedHash, 1.0f);
-        // controller.center = new Vector3(0, -0.5f, 0);
-        // controller.height = 1;
+        controller.center = new Vector3(0, -0.5f, 0);
+        controller.height = 1;
         yield return new WaitForSeconds(1.1f);
-        // controller.center = new Vector3(0, 0, 0);
-        // controller.height = 2;
+        controller.center = new Vector3(0, 0, 0);
+        controller.height = 2;
         animator.SetBool(s_SlidingHash, false);
         isSliding = false;
     }
