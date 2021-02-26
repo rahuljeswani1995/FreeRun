@@ -7,7 +7,7 @@ public class TileManager : MonoBehaviour
     public GameObject[] tilePrefabs;
     public float zSpawn = 50;
     public float tileLength = 30;
-    public int numberOfTiles = 5;
+    public int numberOfTiles = 3;
 
     public Transform playerTransform;
 
@@ -22,12 +22,10 @@ public class TileManager : MonoBehaviour
         // tile's surface is 23.7f units below the tile position, therefore sliding it up to match player's position
         tilePosY = 23.7f;
         safeDistance = tileLength + 5;
+        SpawnTile(0);
         for(int i=0; i<numberOfTiles; i++)
         {
-            if(i==0)
-                SpawnTile(0);
-            else
-                SpawnTile(Random.Range(0, tilePrefabs.Length));
+            SpawnTile(Random.Range(1, tilePrefabs.Length));
         }
     }
 
