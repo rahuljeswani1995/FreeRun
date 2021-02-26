@@ -16559,7 +16559,7 @@ GameObject:
   - component: {fileID: 2286005082798680680}
   m_Layer: 0
   m_Name: Big_trash_bin
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16668,7 +16668,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2260589297098051824}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009574508, y: -0.005369067, z: 0.014894716}
+  m_LocalPosition: {x: 0.0095, y: -0.0059, z: 0.0149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2257621897640024556}
@@ -134992,7 +134992,7 @@ GameObject:
   - component: {fileID: 2074482457631859589}
   m_Layer: 0
   m_Name: Big_trash_bin (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
