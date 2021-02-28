@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         // Put your location here 
         // location/<<user-name>>
         // Make sure to change this
-        ScreenCapture.CaptureScreenshot("/Users/parambole/game-screenshots/param-"+timeChangeInMillis+"-"+Type);
+        ScreenCapture.CaptureScreenshot("C:\\Extras\\MS\\529-MLG\\FreeRun\\vai-"+timeChangeInMillis+"-"+Type+".jpg");
 
     }
 
@@ -147,8 +147,18 @@ public class PlayerController : MonoBehaviour
             targetPostion += Vector3.right * laneDistance;
         }
 
-        transform.position = Vector3.Lerp(transform.position, targetPostion, 70 * Time.deltaTime);
-        controller.center = controller.center;
+        // transform.position = Vector3.Lerp(transform.position, targetPostion, 70 * Time.deltaTime);
+        // controller.center = controller.center;
+
+        if(transform.position == targetPostion)
+            return;
+
+        Vector3 diff = targetPostion - transform.position;
+        Vector3 moveDir = diff.normalized * 12 * Time.deltaTime;
+        if(moveDir.sqrMagnitude < diff.sqrMagnitude)
+            controller.Move(moveDir);
+        else
+            controller.Move(diff);
     }
 
     private void FixedUpdate()
@@ -194,6 +204,11 @@ public class PlayerController : MonoBehaviour
         controller.height = 2;
         animator.SetBool(s_SlidingHash, false);
         isSliding = false;
+    }
+
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(1.0f);
     }
 
 
