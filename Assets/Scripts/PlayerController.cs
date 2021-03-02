@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         // Put your location here 
         // location/<<user-name>>
         // Make sure to change this
-        ScreenCapture.CaptureScreenshot("C:\\Extras\\MS\\529-MLG\\FreeRun\\vai-"+timeChangeInMillis+"-"+Type+".jpg");
+        ScreenCapture.CaptureScreenshot("/Users/parambole/game-screenshots/param-"+timeChangeInMillis+"-"+Type+".jpg");
 
     }
 
