@@ -34,14 +34,11 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void dataCollection(string Type) {
-        
-        float timeChangeInMillis = Time.deltaTime * 1000;
-
+    void CaptureScreenshotForAction() {
         // Put your location here 
         // location/<<user-name>>
         // Make sure to change this
-        ScreenCapture.CaptureScreenshot("C:\\Extras\\MS\\529-MLG\\FreeRun\\vai-"+timeChangeInMillis+"-"+Type+".jpg");
+        ScreenCapture.CaptureScreenshot("/Users/parambole/game-screenshots/param.jpg");
 
     }
 
@@ -54,15 +51,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.W)) {
-            dataCollection("idle");
-        } else if(Input.GetKeyDown(KeyCode.UpArrow)) {
-            dataCollection("jump");
-        } else if(Input.GetKeyDown(KeyCode.DownArrow)) {
-            dataCollection("duck");
-        } else if(Input.GetKeyDown(KeyCode.LeftArrow)) {
-            dataCollection("left");
-        } else if(Input.GetKeyDown(KeyCode.RightArrow)) {
-            dataCollection("right");
+            CaptureScreenshotForAction();
         }
             
 
